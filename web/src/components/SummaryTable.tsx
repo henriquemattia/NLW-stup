@@ -36,7 +36,8 @@ export function SummaryTable() {
                 {summaryDates.map(date => {
                     return <HabitDay key={date.toString()}/>
                 })}
-
+                
+                        {/* DIAS NÃO CLICAVEIS  */}
                 {amountOfdaysToFill > 0 && Array.from({ length: amountOfdaysToFill}).map((_, i)=>{
                     return (
                         <div
