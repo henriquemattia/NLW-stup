@@ -3,6 +3,7 @@ import * as Dialog from '@radix-ui/react-dialog';
 import logoImage from '../assets/logo.svg'
 
 import { useState } from "react";
+import { NewHabitForm } from "./NewHabitForm";
 
 export function Header () {
     return (
@@ -26,7 +27,10 @@ export function Header () {
                             <X size={24} aria-label="Fechar"/>
                         </Dialog.Close>
 
-                        Conteudo do Modal
+                        <Dialog.Title className="text-3xl leading-tight  font-extrabold">
+                            Criar hábito
+                        </Dialog.Title>
+                        <NewHabitForm />
                     </Dialog.Content>
                 </Dialog.Portal>
             </Dialog.Root>
