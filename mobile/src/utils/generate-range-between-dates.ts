@@ -11,6 +11,7 @@ export function generateRangeDatesFromYearStart() {
     dateRange.push(compareDate.toDate())
     compareDate = compareDate.add(1, 'day')
   }
-
+  
+  
   return dateRange
 }
