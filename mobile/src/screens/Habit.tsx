@@ -11,7 +11,7 @@ import { BackButton } from "../components/BackButton";
 import { ProgressBar } from "../components/ProgressBar";
 import { Checkbox } from "../components/Checkbox";
 import { Loading } from "../components/Loading";
-// import { HabitsEmpty } from "../components/HabitsEmpty";
+import { HabitsEmpty } from "../components/HabitsEmpty";
 
 interface Params {
   date: string;
@@ -108,20 +108,19 @@ export function Habit() {
                   key={habit.id}
                   title={habit.title}
                   checked={completedHabits?.includes(habit.id)}
+                  disabled={isDateInPast}
                   onPress={() => handleToggleHabits(habit.id)}
-                // disabled={isDateInPast}
                 />
               ))
               :
-              <Text>hahahahahah</Text>
-            // <HabitsEmpty />
+              <HabitsEmpty />
           }
         </View>
 
         {
           isDateInPast && (
-            <Text className="text-white mt-10 text-center">
-              Você não pode editar hábitos de uma data passada.
+            <Text className="text-violet-400 opacity-70 mt-10 text-center font-semibold ">
+              Você não pode editar hábitos de uma data passada !
             </Text>
           )
         }
