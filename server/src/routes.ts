@@ -160,14 +160,5 @@ export async function appRoutes(app: FastifyInstance) {
         `
         return summary
     })
-
-    app.get('/test', () =>{
-        console.log('bateu');
-
-        return {
-            beteu: "sim"
-        }
-        
-    })
 }
 
